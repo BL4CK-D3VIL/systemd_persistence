@@ -42,13 +42,13 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-read -p "$(echo -e ${WHITE}"[?] Enter IP: "${RESET})" ip
+read -p "$(echo -e ${WHITE}"[?] Enter LHOST: "${RESET})" ip
 if ! validate_ip "$ip"; then
     echo -e "${RED}[-] Invalid IP address!${RESET}"
     exit 1
 fi
 
-read -p "$(echo -e ${WHITE}"[?] Enter PORT: "${RESET})" port
+read -p "$(echo -e ${WHITE}"[?] Enter LPORT: "${RESET})" port
 if ! validate_port "$port"; then
     echo -e "${RED}[-] Invalid port number!${RESET}"
     exit 1
